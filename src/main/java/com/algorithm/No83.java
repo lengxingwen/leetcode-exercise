@@ -7,36 +7,36 @@ package com.algorithm;
  * Created by leng on 2021/03/26.
  */
 public class No83 {
-    public ListNode deleteDuplicates(ListNode head) {
-        if(head==null)return head;
-        ListNode virtualNode = new ListNode(0, head);
-        ListNode cur=virtualNode;
-        while(cur.next!=null&&cur.next.next!=null){
-            if(cur.next.val==cur.next.next.val){
-                int val = cur.next.val;
-                while(cur.next.next!=null&&cur.next.next.val==val){
-                    cur.next=cur.next.next;
-                }
-            }else {
-                cur=cur.next;
-            }
-        }
-        return virtualNode.next;
-    }
-
-    public ListNode deleteDuplicates1(ListNode head) {
-        if (head == null) {
-            return head;
-        }
-
-        ListNode cur = head;
-        while (cur.next != null) {
-            if (cur.val == cur.next.val) {
-                cur.next = cur.next.next;
-            } else {
-                cur = cur.next;
-            }
-        }
-        return head;
-    }
+//    public ListNode deleteDuplicates(ListNode head) {
+//        if(head==null)return head;
+//        ListNode virtualNode = new ListNode(0, head);
+//        ListNode cur=virtualNode;
+//        while(cur.next!=null&&cur.next.next!=null){
+//            if(cur.next.val==cur.next.next.val){
+//                int val = cur.next.val;
+//                while(cur.next.next!=null&&cur.next.next.val==val){
+//                    cur.next=cur.next.next;
+//                }
+//            }else {
+//                cur=cur.next;
+//            }
+//        }
+//        return virtualNode.next;
+//    }
+//
+//    public ListNode deleteDuplicates1(ListNode head) {
+//        if (head == null) {
+//            return head;
+//        }
+//
+//        ListNode cur = head;
+//        while (cur.next != null) {
+//            if (cur.val == cur.next.val) {
+//                cur.next = cur.next.next;
+//            } else {
+//                cur = cur.next;
+//            }
+//        }
+//        return head;
+//    }
 }
